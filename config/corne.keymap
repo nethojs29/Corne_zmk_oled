@@ -30,38 +30,28 @@
         compatible = "zmk,combos";
 
         a {
-            bindings = <&kp ESCAPE>;
+            bindings = <&kp TAB>;
             key-positions = <2 1>;
         };
 
         b {
-            bindings = <&kp CLCK>;
+            bindings = <&kp MINUS>;
             key-positions = <14 13>;
         };
 
         c {
-            bindings = <&kp TAB>;
+            bindings = <&kp GRAVE>;
             key-positions = <26 25>;
         };
 
         d {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <10 9>;
         };
 
         e {
-            bindings = <&kp ENTER>;
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <22 21>;
-        };
-
-        f {
-            bindings = <&kp MINUS>;
-            key-positions = <19 20>;
-        };
-
-        g {
-            bindings = <&kp EQUAL>;
-            key-positions = <21 20>;
         };
 
         h {
@@ -73,26 +63,32 @@
             bindings = <&sys_reset>;
             key-positions = <30 10>;
         };
+
+        eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <33 34>;
+        };
     };
-keymap {
+
+    keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB      &kp Q    &kp W       &kp E         &kp R       &kp T                                                              &kp Y      &kp U      &kp I         &kp O       &kp P     &kp BACKSLASH
-&lt 3 MINUS  &lt 1 A  &hm LGUI S  &hm LSHIFT D  &hm LALT F  &hm LA(LC(LG(LSHIFT))) G                                           &kp H      &lt 5 J    &hm LSHIFT K  &hm LGUI L  &kp SEMI  &kp SQT
-&kp TILDE    &lt 3 Z    &kp X       &kp C         &kp V       &kp B                                                            &kp N      &kp M      &kp COMMA     &kp DOT     &kp FSLH  &kp EQUAL
-                                  &kp LCTRL     &kp BSPC    &lt 4 ESC                                                                                      &kp ENTER  &kp SPACE  &tog 2
+&kp TAB      &kp Q    &kp W       &kp E         &kp R       &kp T                       &kp Y      &kp U      &kp I         &kp O       &kp P            &kp BACKSLASH
+&lt 3 MINUS  &lt 1 A  &hm LGUI S  &hm LSHIFT D  &hm LALT F  &hm LA(LC(LG(LSHIFT))) G    &kp H      &lt 5 J    &hm LSHIFT K  &hm LGUI L  &lt 6 SEMICOLON  &kp SQT
+&kp TILDE    &lt 3 Z  &kp X       &kp C         &kp V       &kp B                       &kp N      &kp M      &kp COMMA     &kp DOT     &kp FSLH         &kp EQUAL
+                                  &kp LCTRL     &kp BSPC    &lt 4 ESC                   &kp ENTER  &kp SPACE  &tog 2
             >;
         };
 
         navigation {
             bindings = <
-&trans  &trans  &trans  &trans              &trans         &kp LC(UP_ARROW)                                     &trans          &trans        &trans      &trans         &trans  &trans
-&trans  &trans  &trans  &trans              &trans         &kp LC(DOWN)                   &kp LEFT        &kp DOWN      &kp UP      &kp RIGHT      &trans  &trans
-&trans  &trans  &trans  &trans              &trans         &trans                      &kp LG(LEFT)    &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &trans  &trans
-                        &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &trans                                                 &kp C_PREVIOUS  &kp C_STOP    &kp C_NEXT
+&trans  &trans  &trans  &trans              &trans         &kp LC(UP_ARROW)    &trans          &trans        &trans      &trans         &trans  &trans
+&trans  &trans  &trans  &trans              &trans         &kp LC(DOWN)        &kp LEFT        &kp DOWN      &kp UP      &kp RIGHT      &trans  &trans
+&trans  &trans  &trans  &trans              &trans         &trans              &kp LG(LEFT)    &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &trans  &trans
+                        &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &trans              &kp C_PREVIOUS  &kp C_STOP    &kp C_NEXT
             >;
 
             label = "NAV";
@@ -100,10 +96,10 @@ keymap {
 
         dvorak {
             bindings = <
-&trans  &kp APOS  &kp COMMA  &kp DOT  &kp P   &kp Y                               &kp F   &kp G   &kp C   &kp R  &kp L  &kp FSLH
-&trans  &kp A     &kp O      &kp E    &kp U   &kp I              &kp D   &kp H   &kp T   &kp N  &kp S  &kp MINUS
-&trans  &kp SEMI  &kp Q      &kp J    &kp K   &kp X                         &kp B   &kp M   &kp W   &kp V  &kp Z  &trans
-                             &trans   &trans  &trans                                    &trans  &trans  &trans
+&trans  &kp APOS  &kp COMMA  &kp DOT  &kp P   &kp Y     &kp F   &kp G   &kp C   &kp R  &kp L  &kp FSLH
+&trans  &kp A     &kp O      &kp E    &kp U   &kp I     &kp D   &kp H   &kp T   &kp N  &kp S  &kp MINUS
+&trans  &kp SEMI  &kp Q      &kp J    &kp K   &kp X     &kp B   &kp M   &kp W   &kp V  &kp Z  &trans
+                             &trans   &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "DVORAK";
@@ -112,20 +108,19 @@ keymap {
         config {
             display-name = "CONFIG";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4         &kp LC(UP)                                                         &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3                    &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &trans  &trans  &trans        &trans         &trans                    &trans  &trans  &trans  &trans  &kp END   &kp PG_DN
-                                         &kp LC(LEFT)  &kp LC(RIGHT)  &trans                                                                          &kp INS          &kp DEL          &trans
+&trans  &kp N1          &kp N2        &kp N3        &kp N4         &kp LC(UP)      &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &kp BSPC
+&trans  &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
+&trans  &trans          &trans        &trans        &trans         &trans          &trans    &trans    &trans  &trans     &kp END   &kp PG_DN
+                                      &kp LC(LEFT)  &kp LC(RIGHT)  &trans          &kp INS   &kp DEL   &trans
             >;
-
         };
 
         numbers {
             bindings = <
-&trans  &kp N1        &kp N2      &kp N3         &kp N4        &kp N5                                   &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &trans
-&trans  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)             &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &trans
-&kp F1  &kp F2        &kp F3      &kp F4         &kp F5        &kp F6                  &kp F7         &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
-                                  &trans         &trans        &trans                                           &trans         &trans        &trans
+&trans  &kp N1        &kp N2      &kp N3         &kp N4        &kp N5           &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &trans
+&trans  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &trans
+&kp F1  &kp F2        &kp F3      &kp F4         &kp F5        &kp F6           &kp F7         &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
+                                  &trans         &trans        &trans           &trans         &trans        &trans
             >;
 
             label = "NUMBERS";
@@ -133,13 +128,24 @@ keymap {
 
         symbols {
             bindings = <
-&trans  &trans  &kp LS(LBRC)  &kp LS(RBRC)  &trans  &trans                        &trans  &trans  &trans         &trans  &trans  &trans
-&trans  &trans  &kp LS(LPAR)  &kp LS(RPAR)  &trans  &trans           &trans  &trans  &kp LS(COLON)  &trans  &trans  &trans
-&trans  &trans  &kp LBKT      &kp RBKT      &trans  &trans           &trans  &trans  &trans         &trans  &trans  &trans
-                              &trans        &trans  &trans                                    &trans  &trans  &trans
+&trans  &trans  &kp LS(LBRC)  &kp LS(RBRC)  &kp MINUS  &kp BACKSLASH       &trans  &trans  &trans         &trans          &trans  &trans
+&trans  &trans  &kp LS(LPAR)  &kp LS(RPAR)  &kp EQUAL  &kp SINGLE_QUOTE    &trans  &trans  &kp LS(COLON)  &kp LEFT_SHIFT  &trans  &trans
+&trans  &trans  &kp LBKT      &kp RBKT      &kp GRAVE  &trans              &trans  &trans  &trans         &trans          &trans  &trans
+                              &trans        &trans     &trans              &trans  &trans  &trans
             >;
 
             label = "SYMBOLS";
+        };
+
+        media {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans            &trans      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans            &trans      &trans  &trans  &trans
+                        &trans  &trans  &trans    &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT
+            >;
+
+            label = "media";
         };
     };
 };
