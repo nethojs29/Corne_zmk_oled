@@ -85,8 +85,6 @@ keymap {
 &kp TILDE    &lt 3 Z    &kp X       &kp C         &kp V       &kp B                                                            &kp N      &kp M      &kp COMMA     &kp DOT     &kp FSLH  &kp EQUAL
                                   &kp LCTRL     &kp BSPC    &lt 4 ESC                                                                                      &kp ENTER  &kp SPACE  &tog 2
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         navigation {
@@ -98,7 +96,6 @@ keymap {
             >;
 
             label = "NAV";
-            sensor-bindings = <&inc_dec_kp LG(TAB) LS(LG(TAB))>;
         };
 
         dvorak {
@@ -110,7 +107,6 @@ keymap {
             >;
 
             label = "DVORAK";
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOLUME_UP>;
         };
 
         config {
@@ -122,7 +118,6 @@ keymap {
                                          &kp LC(LEFT)  &kp LC(RIGHT)  &trans                                                                          &kp INS          &kp DEL          &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
         };
 
         numbers {
