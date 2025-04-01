@@ -50,7 +50,7 @@
         };
 
         e {
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <&hm LG(LEFT_SHIFT) SINGLE_QUOTE>;
             key-positions = <21 20>;
         };
 
@@ -70,7 +70,7 @@
         };
 
         parent {
-            bindings = <&kp LEFT_PARENTHESIS>;
+            bindings = <&hm LS(LALT) LEFT_PARENTHESIS>;
             key-positions = <15 16>;
         };
 
@@ -102,6 +102,11 @@
         colon {
             bindings = <&kp COLON>;
             key-positions = <19 21>;
+        };
+
+        supr {
+            bindings = <&kp DELETE>;
+            key-positions = <10 9>;
         };
     };
 
