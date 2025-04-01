@@ -31,27 +31,27 @@
 
         a {
             bindings = <&kp TAB>;
-            key-positions = <2 1>;
+            key-positions = <2 3>;
         };
 
         b {
             bindings = <&kp MINUS>;
-            key-positions = <14 13>;
+            key-positions = <14 15>;
         };
 
         c {
             bindings = <&kp GRAVE>;
-            key-positions = <26 25>;
+            key-positions = <26 27>;
         };
 
         d {
             bindings = <&kp BACKSLASH>;
-            key-positions = <10 9>;
+            key-positions = <9 8>;
         };
 
         e {
             bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <22 21>;
+            key-positions = <21 20>;
         };
 
         h {
@@ -66,7 +66,42 @@
 
         eq {
             bindings = <&kp EQUAL>;
-            key-positions = <33 34>;
+            key-positions = <33 32>;
+        };
+
+        parent {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <15 16>;
+        };
+
+        c_parent {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <20 21>;
+        };
+
+        llave {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <3 4>;
+        };
+
+        c_llave {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <7 8>;
+        };
+
+        bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <27 28>;
+        };
+
+        c_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <31 32>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <16 19>;
         };
     };
 
