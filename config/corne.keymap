@@ -47,6 +47,7 @@
         d {
             bindings = <&kp BACKSLASH>;
             key-positions = <9 8>;
+            slow-release;
         };
 
         e {
@@ -107,6 +108,11 @@
         supr {
             bindings = <&kp DELETE>;
             key-positions = <10 9>;
+        };
+
+        bloq_mayus {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <13 14>;
         };
     };
 
