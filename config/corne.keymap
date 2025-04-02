@@ -32,22 +32,26 @@
         a {
             bindings = <&kp TAB>;
             key-positions = <2 3>;
+            layers = <0>;
         };
 
         b {
             bindings = <&hm LG(LEFT_SHIFT) MINUS>;
             key-positions = <14 15>;
+            layers = <0>;
         };
 
         c {
             bindings = <&kp GRAVE>;
             key-positions = <26 27>;
+            layers = <0>;
         };
 
         d {
             bindings = <&kp BACKSLASH>;
             key-positions = <9 8>;
             slow-release;
+            layers = <0>;
         };
 
         e {
