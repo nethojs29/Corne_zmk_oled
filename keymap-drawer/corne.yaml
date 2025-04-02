@@ -334,3 +334,5 @@ combos:
   k: ':'
 - p: [10, 9]
   k: $$mdi:backspace-reverse-outline$$
+- p: [13, 14]
+  k: $$mdi:apple-keyboard-caps$$
