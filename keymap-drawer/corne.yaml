@@ -304,12 +304,16 @@ layers:
 combos:
 - p: [2, 3]
   k: $$mdi:keyboard-tab$$
+  l: [QWERTY]
 - p: [14, 15]
   k: {t: '-', h: 'Gui+$$mdi:apple-keyboard-shift$$', s: _}
+  l: [QWERTY]
 - p: [26, 27]
   k: {t: '`', s: '~'}
+  l: [QWERTY]
 - p: [9, 8]
   k: {t: \, s: '|'}
+  l: [QWERTY]
 - p: [21, 20]
   k: {t: '''', h: 'Gui+$$mdi:apple-keyboard-shift$$', s: '"'}
 - p: [1, 29]
