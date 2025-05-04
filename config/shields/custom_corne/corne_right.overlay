@@ -1,0 +1,22 @@
+#include "corne.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
+
+&five_column_transform {
+    col-offset = <6>;
+};
+
+&kscan0 {
+    row-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>,     // fila 1 (superior)
+                <&pro_micro 10 GPIO_ACTIVE_HIGH>,    // fila 2
+                <&pro_micro 21 GPIO_ACTIVE_HIGH>,    // fila 3 (home row, reparada)
+                <&pro_micro 8 GPIO_ACTIVE_HIGH>;     // fila 4 (inferior)
+
+    col-gpios = <&pro_micro 14 GPIO_ACTIVE_HIGH>,    // columna 1
+                <&pro_micro 15 GPIO_ACTIVE_HIGH>,    // columna 2
+                <&pro_micro 18 GPIO_ACTIVE_HIGH>,    // columna 3
+                <&pro_micro 19 GPIO_ACTIVE_HIGH>,    // columna 4
+                <&pro_micro 20 GPIO_ACTIVE_HIGH>;    // columna 5
+};
